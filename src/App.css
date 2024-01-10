@@ -1,0 +1,14 @@
+/* styles.css */
+.placeholder-color {
+    color: black;
+  }
+  
+  /* Other styles for your input */
+  .input-style {
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 300px;
+    background: #CDCDCD;
+  }
+  
