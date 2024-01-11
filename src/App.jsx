@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+
 
 function App() {
-  const [city, setCity] = useState("london");
+  const [city, setCity] = useState("delhi");
   const [data,setData]=useState([])
   
 
@@ -26,7 +26,7 @@ function App() {
   return (
     < div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',background:'black', height:'100vh' ,width:'100%'}}>
       <div style={{textAlign:'center'}}>
-        <input style={{textAlign:'center',color:'white',boxShadow: '0 0 10px 2px white', animation: 'glow 2s infinite',border:'none',borderRadius:'20px',height:'30px', width:'300px',background:'black'}}
+        <input style={{fontFamily:'initial',textAlign:'center',color:'white',boxShadow: '0 0 10px 2px white', animation: 'glow 2s infinite',border:'none',borderRadius:'20px',height:'30px', width:'300px',background:'black'}}
           type='text'
           placeholder='     Enter Your City'
           onChange={(e) => {
@@ -36,14 +36,14 @@ function App() {
         </br>
         
 
-        <div style={{boxShadow: '0 0 10px 2px white', animation: 'glow 2s infinite' ,marginTop:'50px',paddingTop:'15px',border:'1px solid grey',borderRadius:'15px',background:'black', height:'500px' ,width:"400px",color:'white'}}>
+        <div style={{fontFamily:'initial',boxShadow: '0 0 10px 2px white', animation: 'glow 2s infinite' ,marginTop:'50px',paddingTop:'15px',border:'1px solid grey',borderRadius:'15px',background:'black', height:'500px' ,width:"400px",color:'white'}}>
           {data.current ? <p>{data.current.last_updated}</p> : null}
           {data.current ? <h1>{data.current.temp_c} °C</h1> : null}
           {data.location ? <p style={{paddingTop:'40px'}}>{data.location.name}</p> : null}
           {data.current ? <p style={{color:'grey'}}>{data.current.condition.text}</p> : null}
           <div style={{paddingTop:'120px',display:'flex', justifyContent:'space-evenly'}}>
             <div>
-              {data.current ? <p>{data.current.humidity}%</p> : null }
+              {data.current ? <p>{data.current.humidity} %</p> : null }
               <p>Humidity</p>
             </div>
             <div>
@@ -51,7 +51,7 @@ function App() {
               <p>Wind</p>
             </div>
             <div>
-              {data.current ? <p>{data.current.precip_mm}mm</p> : null}
+              {data.current ? <p>{data.current.precip_mm} mm</p> : null}
               <p>Rain</p>
             </div>
           </div>
