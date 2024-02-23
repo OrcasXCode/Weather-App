@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [city, setCity] = useState("delhi");
